@@ -18,7 +18,11 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="style.css" />
+=======
+    <link rel="stylesheet" href="./assets/css/style.css" />
+>>>>>>> Stashed changes
     <title>Work Day Scheduler</title>
   </head>
 
@@ -29,6 +33,9 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container-lg px-5">
+=======
+    <div class="container-lg px-5 col" id="time-container">
+>>>>>>> Stashed changes
       <!-- Use class for "past", "present", and "future" to apply styles to the
         time-block divs accordingly. The javascript will need to do this by
         adding/removing these classes on each div by comparing the hour in the
@@ -37,6 +44,7 @@
         desired layout and colors. The html below should be removed or updated
         in the finished product. Remember to delete this comment once the
         code is implemented.
+<<<<<<< Updated upstream
         -->
 
       <!-- Example of a past time block. The "past" class adds a gray background color. -->
@@ -77,3 +85,24 @@
   </body>
 </html>
 
+=======
+      -->
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/advancedFormat.js"></script>
+    <script>dayjs.extend(window.dayjs_plugin_advancedFormat)</script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
+    <script>dayjs.extend(window.dayjs_plugin_utc)</script>
+
+    <script src="./assets/js/script.js"></script>
+
+  </body>
+</html>
+
+    
+
+>>>>>>> Stashed changes
