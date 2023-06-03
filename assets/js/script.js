@@ -1,8 +1,24 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 
 $(window).on("load", function () {
+
+  setInterval(function() {
+    var date = new Date();
+    var h = date.getHours();
+    var m = date.getMinutes();
+    var s = date.getSeconds();
+    if(h == 0){
+    }
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    var time = h + ":" + m + ":" + s;
+
+
+    document.getElementById("Clock").textContent = time;
+    
+  }, 1000);
+    
+
   function makeHours(nowTime){
     for(index = 0; index < 24; index++){
       let curHour = index
@@ -25,12 +41,13 @@ $(window).on("load", function () {
       $(labelEl).append(btnEl)
       $(btnEl).append(iEl)
       $(mainContainer).append(labelEl)
+    }
+    
   }
-  
-}
-mainContainer = $("#time-container")
-timeRightNow = dayjs().hour()
-makeHours(timeRightNow)
+  console.log("figgity")
+  mainContainer = $("#time-container")
+  timeRightNow = dayjs().hour()
+  makeHours(timeRightNow)
 
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
