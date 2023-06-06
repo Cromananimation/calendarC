@@ -1,7 +1,9 @@
 
 $(window).on("load", function () {
+  // changed header
   headerToday = dayjs().format("dddd, MMMM Do") 
   $("#current-day").text(headerToday)
+  // set time functions
   setInterval(function() {
     var date = new Date();
     var h = date.getHours();
@@ -18,7 +20,7 @@ $(window).on("load", function () {
     document.getElementById("Clock").textContent = time;
     
   }, 1000);
-    
+    // used this statement for reating time
 
   function makeHours(nowTime){
     for(index = 0; index < 24; index++){
@@ -32,6 +34,7 @@ $(window).on("load", function () {
       else {
         whenFromNow = "present"
       }
+      //can not get save to work for 
       let labelZ = $('<div id="hour-' + curHour + '"' + ' class="row time-block ' + whenFromNow + '"></div>')
       let timeZ = $('<div class="col-2 col-md-1 hour text-center py-3" id="time-text-box">' + curHour + '</div>')
       let textZ = $('<textarea class="col-8 col-md-10 description" rows="3"></textarea>')
@@ -41,7 +44,6 @@ $(window).on("load", function () {
       $(labelZ).append(textZ)
       $(labelZ).append(btnZ)
       $(btnZ).append(iZ) 
-
       $(mainContainer).append(labelZ)
     }
     
